@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kuldeep Soni — AI & Full Stack Developer, AI/ML Engineer and Agentic AI Builder." />
+  <title>Kuldeep Soni | AI & Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="dotCanvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Kuldeep Soni home">Kuldeep Soni</a>
+    <nav id="navLinks" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn" href="https://github.com/justkuldeep" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.78-.25.78-.55v-2.14c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.64 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.12 1.17a10.84 10.84 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.38-2.67 5.35-5.21 5.63.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>
+      </a>
+      <a class="icon-btn linkedin" href="https://www.linkedin.com/in/justkuldeep" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.1 3.4A2.1 2.1 0 1 1 .9 3.4a2.1 2.1 0 0 1 4.2 0ZM1.2 8.1h4v12.8h-4V8.1Zm6.5 0h3.8v1.75h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.07 0-2.39 1.61-2.39 3.27v6.31h-3.94V8.1Z"/></svg>
+      </a>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">◐</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> AI & FULL STACK DEVELOPER</p>
+        <h1>Building software<br>with <em>intelligence.</em></h1>
+        <p class="hero-text">I’m Kuldeep Soni — an AI/ML engineer in the making, building RAG systems, AI agents, intelligent automation and modern full-stack products.</p>
+        <p class="opportunity-line"><span></span> Open to opportunities / internships in AI</p>
+        <div class="hero-buttons"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn ghost" href="mailto:kuldeepsoni.dev@gmail.com">Let's connect</a></div>
+        <div class="quick-links">
+          <a href="https://github.com/justkuldeep" target="_blank" rel="noopener" class="social-link"><svg viewBox="0 0 24 24"><path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.78-.25.78-.55v-2.14c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.64 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.12 1.17a10.84 10.84 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.38-2.67 5.35-5.21 5.63.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/justkuldeep" target="_blank" rel="noopener" class="social-link"><svg viewBox="0 0 24 24"><path d="M5.1 3.4A2.1 2.1 0 1 1 .9 3.4a2.1 2.1 0 0 1 4.2 0ZM1.2 8.1h4v12.8h-4V8.1Zm6.5 0h3.8v1.75h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.07 0-2.39 1.61-2.39 3.27v6.31h-3.94V8.1Z"/></svg>LinkedIn ↗</a>
+          <span>Indore, India</span>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orb"></div><div class="grid-lines"></div>
+        <div class="code-card"><div class="dots"><i></i><i></i><i></i></div><pre><span class="muted">agent</span> = <span class="cyan">AIEngineer</span>(
+  name=<span class="yellow">"Kuldeep"</span>,
+  focus=[
+    <span class="green">"RAG"</span>, <span class="green">"Agents"</span>,
+    <span class="green">"GenAI"</span>, <span class="green">"Full Stack"</span>
+  ]
+)</pre><div class="status">● systems online</div></div>
+      </div>
+    </section>
+
+    <section class="stats reveal"><div><strong>7.5</strong><span>CGPA / 10</span></div><div><strong>2023—27</strong><span>B.Tech AI & ML</span></div><div><strong>4</strong><span>Selected builds</span></div><div><strong>∞</strong><span>Things to learn</span></div></section>
+
+    <section class="section split" id="about">
+      <div><p class="section-label">01 / ABOUT</p><h2>Curious by default.<br><span>Builder by choice.</span></h2></div>
+      <div class="about-copy"><p>I’m an aspiring AI/ML Engineer and Full Stack Developer focused on turning ideas into useful, production-oriented applications.</p><p>My work sits at the intersection of <b>Machine Learning, Deep Learning, Generative AI, RAG, AI Agents and web development.</b> I enjoy taking an idea from architecture to interface and making the pieces work together.</p><div class="chips"><span>AI Agents</span><span>RAG</span><span>Agentic AI</span><span>Generative AI</span><span>Full Stack</span><span>Automation</span></div></div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head"><div><p class="section-label">02 / TOOLKIT</p><h2>Skills that turn<br><span>ideas into systems.</span></h2></div><p class="section-note">A practical stack spanning AI, data, backend, frontend and developer tooling.</p></div>
+      <div class="skill-grid">
+        <article><span class="skill-no">01</span><h3>AI / ML / DL</h3><p>Machine Learning · Deep Learning · Generative AI · RAG · AI Agents · Agentic AI · LLM Fine-Tuning · Prompt Engineering · Computer Vision</p></article>
+        <article><span class="skill-no">02</span><h3>AI Libraries</h3><p>LangChain · Pydantic · FastAPI · TensorFlow · Scikit-learn · NumPy · Pandas · Matplotlib · OpenCV · Embeddings · Vector Search</p></article>
+        <article><span class="skill-no">03</span><h3>Web & Backend</h3><p>Python · JavaScript · React.js · Node.js · Express.js · REST APIs · FastAPI · HTML5 · CSS3 · Tailwind CSS · Vite</p></article>
+        <article><span class="skill-no">04</span><h3>Data & Storage</h3><p>MongoDB · MySQL · SQLite · ChromaDB · Atlas Vector Search · Information Retrieval</p></article>
+        <article><span class="skill-no">05</span><h3>Languages</h3><p>Python · JavaScript · C++ · C · Java</p></article>
+        <article><span class="skill-no">06</span><h3>Tools & Core CS</h3><p>Git · GitHub · VS Code · Postman · Docker · Google Colab · DSA · OOP · DBMS · OS · Computer Networks · n8n</p></article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-head"><div><p class="section-label">03 / SELECTED WORK</p><h2>Things I’ve<br><span>built.</span></h2></div><p class="section-note">Wide recruiter-friendly cards. <b>View project</b> flips the card here; <b>Open project</b> takes you to the project in a new tab.</p></div>
+      <div class="project-grid">
+
+        <article class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="project-face project-front">
+              <div class="project-top"><div class="project-logo-slot has-logo"><img src="assets/ghumo-india-logo.png" alt="Ghumo India project logo"></div><div class="project-meta"><span>01</span><span>GENAI · WEB</span></div></div>
+              <div class="project-content">
+                <h3>Ghumo India</h3>
+                <p>AI-powered travel platform built as an attempt to clone the <strong>Incredible India</strong> website, with a Gemini AI assistant for personalized Indian destination recommendations and culturally focused itineraries.</p>
+                <div class="tags"><span>Gemini AI</span><span>React</span><span>Tailwind</span><span>Vite</span><span>n8n</span></div>
+              </div>
+              <div class="project-actions"><button class="flip-trigger primary-action" type="button">View project <span>↻</span></button><a class="external-action" href="https://ghumo-india-rho.vercel.app/" target="_blank" rel="noopener">Open live project ↗</a></div>
+            </div>
+            <div class="project-face project-back">
+              <div class="demo-head"><span>LIVE DEMONSTRATION · GHUMO INDIA</span><button class="flip-trigger" type="button">↻ Flip back</button></div>
+              <iframe src="https://ghumo-india-rho.vercel.app/" title="Ghumo India live demonstration" loading="lazy"></iframe>
+              <div class="demo-footer"><span>Attempted clone of Incredible India</span><a href="https://ghumo-india-rho.vercel.app/" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="project-face project-front">
+              <div class="project-top"><div class="project-logo-slot has-logo"><img src="assets/youtube_rag_logo%20.png" alt="YouTube RAG Agent project logo"></div><div class="project-meta"><span>02</span><span>AI · RAG</span></div></div>
+              <div class="project-content">
+                <h3>YouTube RAG Agent</h3>
+                <p>End-to-end Agentic AI RAG system that ingests YouTube transcripts, chunks and embeds content into ChromaDB, then answers questions with contextual responses and timestamps.</p>
+                <div class="tags"><span>Python</span><span>LangChain</span><span>RAG</span><span>ChromaDB</span><span>Gemini</span><span>Pydantic</span></div>
+              </div>
+              <div class="project-actions"><button class="flip-trigger primary-action" type="button">View project <span>↻</span></button><a class="external-action" href="https://github.com/justkuldeep/Youtube-RAG" target="_blank" rel="noopener">Open project ↗</a></div>
+            </div>
+            <div class="project-face project-back">
+              <div class="demo-head"><span>DEMONSTRATION · YOUTUBE RAG</span><button class="flip-trigger" type="button">↻ Flip back</button></div>
+              <iframe src="https://www.youtube.com/embed/OT5j_m7GKIA" title="YouTube RAG Agent demonstration" loading="lazy" allowfullscreen></iframe>
+              <div class="demo-footer"><span>Video demonstration</span><a href="https://github.com/justkuldeep/Youtube-RAG" target="_blank" rel="noopener">Open GitHub ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="project-face project-front">
+              <div class="project-top"><div class="project-logo-slot has-logo"><img src="assets/csv_visualizer_logo.png" alt="CSV Visualiser project logo"></div><div class="project-meta"><span>03</span><span>DATA VIZ · WEB</span></div></div>
+              <div class="project-content">
+                <h3>CSV Visualiser</h3>
+                <p>Production-ready client-side visualization platform that parses CSV data directly in the browser and transforms raw tables into interactive charts and dynamic views.</p>
+                <div class="tags"><span>React</span><span>Chart.js</span><span>Tailwind</span><span>Vite</span><span>Data Visualization</span></div>
+              </div>
+              <div class="project-actions"><button class="flip-trigger primary-action" type="button">View project <span>↻</span></button><a class="external-action" href="https://csv-visualiser.vercel.app/" target="_blank" rel="noopener">Open live project ↗</a></div>
+            </div>
+            <div class="project-face project-back">
+              <div class="demo-head"><span>LIVE DEMONSTRATION · CSV VISUALISER</span><button class="flip-trigger" type="button">↻ Flip back</button></div>
+              <iframe src="https://csv-visualiser.vercel.app/" title="CSV Visualiser live demonstration" loading="lazy"></iframe>
+              <div class="demo-footer"><span>Interactive data visualization</span><a href="https://csv-visualiser.vercel.app/" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="project-face project-front">
+              <div class="project-top"><div class="project-logo-slot has-logo"><img src="assets/desktop_automation_logo.png" alt="Desktop Automation System project logo"></div><div class="project-meta"><span>04</span><span>AUTOMATION</span></div></div>
+              <div class="project-content">
+                <h3>Desktop Automation System</h3>
+                <p>Hands-free voice-controlled desktop automation tool using Python and speech recognition to launch applications, position the mouse, control keyboard input and execute custom tasks.</p>
+                <div class="tags"><span>Python</span><span>PyAutoGUI</span><span>SpeechRecognition</span><span>AI / ML</span></div>
+              </div>
+              <div class="project-actions"><button class="flip-trigger primary-action" type="button">View project <span>↻</span></button><a class="external-action" href="https://github.com/justkuldeep/Desktop-Automation" target="_blank" rel="noopener">Open project ↗</a></div>
+            </div>
+            <div class="project-face project-back demo-message">
+              <div class="demo-head"><span>PROJECT DEMONSTRATION</span><button class="flip-trigger" type="button">↻ Flip back</button></div>
+              <div class="demo-message-inner"><span class="demo-label">LOCAL PYTHON APPLICATION</span><h3>Desktop Automation</h3><p>This is a local desktop application rather than a browser-hosted product. Use the project link to inspect the implementation and run it locally.</p><a class="btn primary" href="https://github.com/justkuldeep/Desktop-Automation" target="_blank" rel="noopener">Open GitHub ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section timeline" id="education"><div><p class="section-label">04 / EDUCATION</p><h2>Learning the<br><span>foundations.</span></h2></div><div class="timeline-list"><div class="timeline-item"><span>2023—2027</span><div><h3>B.Tech — Artificial Intelligence & Machine Learning</h3><p>Indore Institute of Science and Technology, Indore</p><b>CGPA: 7.5 / 10</b></div></div><div class="timeline-item"><span>2022</span><div><h3>Senior Secondary — Class XII</h3><p>Padmaja Higher Secondary School, Dewas (M.P.) · MP Board</p><b>86.2%</b></div></div><div class="timeline-item"><span>2020</span><div><h3>Higher Secondary — Class X</h3><p>Padmaja Higher Secondary School, Dewas (M.P.) · MP Board</p><b>90%</b></div></div></div></section>
+
+    <section class="section extras"><div><p class="section-label">05 / BEYOND CODE</p><h2>Human skills.<br><span>Real curiosity.</span></h2></div><div class="extra-grid"><div><h3>Strengths</h3><p>Algorithmic problem solving, clean coding, DRY/SOLID principles, adaptability, collaboration and independent contribution.</p></div><div><h3>Interests</h3><p>AI research, technical articles, reading, sketching, travel and writing.</p></div><div><h3>Languages</h3><p>English · Hindi</p></div><div><h3>Achievement</h3><p>Madhya Pradesh State Government Scholarship recipient for academic excellence.</p></div></div></section>
+
+    <section class="contact" id="contact"><div class="contact-inner"><p class="section-label">06 / CONTACT</p><h2>Let’s build something<br><em>intelligent.</em></h2><p>Currently looking for AI-focused internship and opportunity roles where I can learn fast, contribute meaningfully and build real-world systems.</p><div class="contact-links"><a class="btn primary" href="mailto:kuldeepsoni.dev@gmail.com">Email me ↗</a><a class="social-link" href="https://github.com/justkuldeep" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.78-.25.78-.55v-2.14c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.64 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.12 1.17a10.84 10.84 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.38-2.67 5.35-5.21 5.63.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>GitHub ↗</a><a class="social-link" href="https://www.linkedin.com/in/justkuldeep" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M5.1 3.4A2.1 2.1 0 1 1 .9 3.4a2.1 2.1 0 0 1 4.2 0ZM1.2 8.1h4v12.8h-4V8.1Zm6.5 0h3.8v1.75h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.07 0-2.39 1.61-2.39 3.27v6.31h-3.94V8.1Z"/></svg>LinkedIn ↗</a></div></div></section>
+  </main>
+  <footer><span>© <span id="year"></span> Kuldeep Soni</span><span>Built with HTML · CSS · JavaScript</span><a href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
